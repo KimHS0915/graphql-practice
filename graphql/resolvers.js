@@ -1,6 +1,9 @@
+import { getBooks, getById } from "./db";
+
 const resolvers = {
   Query: {
-    name: () => "tmp",
+    books: () => getBooks(),
+    book: (_, { id }) => getById(id),
   },
 };
 
