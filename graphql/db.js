@@ -1,4 +1,4 @@
-export const books = [
+export let books = [
   {
     id: 0,
     name: "C Programming Language",
@@ -31,9 +31,32 @@ export const books = [
   },
 ];
 
+let newId = books.length;
+
 export const getBooks = () => books;
 
 export const getById = (id) => {
   const filtered = books.filter((book) => id === book.id);
   return filtered[0];
+};
+
+export const deleteBook = (id) => {
+  const cleanedBooks = books.filter((book) => book.id !== id);
+  if (books.length > cleanedBooks.length) {
+    books = cleanedBooks;
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export const addBook = (name, author, score) => {
+  const newBook = {
+    id: newId++,
+    name,
+    author,
+    score,
+  };
+  books.push(newBook);
+  return newBook;
 };

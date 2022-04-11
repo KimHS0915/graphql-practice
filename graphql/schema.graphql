@@ -9,3 +9,8 @@ type Query {
   books: [Book]!
   book(id: Int!): Book
 }
+
+type Mutation {
+  addBook(name: String!, author: String!, score: Float!): Book!
+  deleteBook(id: Int!): Boolean!
+}
