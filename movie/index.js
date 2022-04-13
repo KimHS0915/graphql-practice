@@ -1,3 +1,4 @@
+import "../env.js";
 import { GraphQLServer } from "graphql-yoga";
 import resolvers from "./graphql/resolvers";
 
