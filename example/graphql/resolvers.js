@@ -1,4 +1,4 @@
-import { getBooks, getById, addBook, deleteBook } from "./db";
+import { getBooks, getById, addBook, deleteBook } from "./books";
 
 const resolvers = {
   Query: {

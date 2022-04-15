@@ -1,4 +1,3 @@
-import "../env.js";
 import { createServer } from "@graphql-yoga/node";
 import typeDefs from "./graphql/typeDefs";
 import resolvers from "./graphql/resolvers";
